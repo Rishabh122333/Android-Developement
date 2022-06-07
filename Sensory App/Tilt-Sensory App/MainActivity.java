@@ -1,39 +1,50 @@
-package com.example.acer.quiz2;
+package com.example.acer.tiltsensorprac;
 
-import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
 
-public class MainActivity extends AppCompatActivity {
-    Button b1;
-    RadioButton r1,r2,r3,r4;
-    static int result=0;
+public class MainActivity extends AppCompatActivity implements SensorEventListener {
+    MediaPlayer mp;
+    SensorManager sm;
+    Sensor s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        b1=(Button)findViewById(R.id.button);
-        r1=(RadioButton)findViewById(R.id.radioButton);
-        r2=(RadioButton)findViewById(R.id.radioButton2);
-        r3=(RadioButton)findViewById(R.id.radioButton3);
-        r4=(RadioButton)findViewById(R.id.radioButton4);
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                result=0;
-                if(r2.isChecked())
-                    result++;
-                else
-                    result--;
-                Intent i=new Intent(MainActivity.this,Second.class);
-                startActivity(i);
-                finish();
+        mp=MediaPlayer.create(this,R.raw.x);
+        sm=(SensorManager)getSystemService(SENSOR_SERVICE);
+        s=sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        sm.registerListener(this,s,SensorManager.SENSOR_DELAY_NORMAL);
 
-            }
-        });
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent sensorEvent) {
+        float x=sensorEvent.values[0];
+        float y=sensorEvent.values[1];
+        float z=sensorEvent.values[2];
+        int x1=(int)x;
+        int y1=(int)y;
+        int z1=(int)z;
+        if(x1!=0)
+        {
+            mp.start();
+        }
+        else
+        {
+            mp.pause();
+        }
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int i) {
+
     }
 }
