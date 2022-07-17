@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "424243895635",
+    "project_id": "mobile-database-bb4ee",
+    "storage_bucket": "mobile-database-bb4ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424243895635:android:5ddfdd05c8daa8ca9395a6",
+        "android_client_info": {
+          "package_name": "com.example.otplogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424243895635-u9ra43bk1l6h51g08sed8kbs5lf1tmgg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.otplogin",
+            "certificate_hash": "9292b3726b3538da0280bd891b9308ba59553d0e"
+          }
+        },
+        {
+          "client_id": "424243895635-lvgj16292s4q6nii28oopuc4e40domqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGSN-Ue7FMFKvaz4yL01bw6vvwak3iZ1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424243895635-lvgj16292s4q6nii28oopuc4e40domqa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
