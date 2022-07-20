@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332755447342",
+    "project_id": "email-databse",
+    "storage_bucket": "email-databse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332755447342:android:0c9777563995ff729739bf",
+        "android_client_info": {
+          "package_name": "com.example.emaillogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332755447342-2gvna639s8fu8q2q0qas3vsi2hut1qj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpElPUNnw_AJ6Xc0Ebc4ybJYgFLxgXZok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332755447342-2gvna639s8fu8q2q0qas3vsi2hut1qj2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
